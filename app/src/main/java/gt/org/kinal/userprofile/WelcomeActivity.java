@@ -1,17 +1,36 @@
 package gt.org.kinal.userprofile;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class WelcomeActivity extends ActionBarActivity {
+
+    private TextView lblWelcome;
+    private Button btnNewOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
+        Bundle bundle = this.getIntent().getExtras();
+        lblWelcome = (TextView)findViewById(R.id.lblWelcome);
+        lblWelcome.setText(getString(R.string.welcome) + " " + bundle.getString("user"));
+
+        btnNewOrder = (Button)findViewById(R.id.btnNewOrder);
+        btnNewOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelcomeActivity.this, NewOrder.class));
+            }
+        });
     }
 
 

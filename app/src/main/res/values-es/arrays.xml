@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_dish">
+        <item value="meat">Carne</item>
+        <item value="chicken">Pollo</item>
+        <item value="fish">Pescado</item>
+    </string-array>
+    <string-array name="side_dish">
+        <item value="potatoes">Papas</item>
+        <item value="rice">Arroz</item>
+        <item value="noodles">Fideos</item>
+        <item value="salad">Ensalada</item>
+    </string-array>
+</resources>

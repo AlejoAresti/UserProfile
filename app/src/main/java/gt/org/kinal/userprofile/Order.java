@@ -1,24 +1,27 @@
+package gt.org.kinal.userprofile;
+
 /**
  * Created by Alejo on 21/02/2015.
  */
 public class Order {
 
-    private int mainDish;
+    private MainDish mainDish;
     private int sideDish1;
     private int sideDish2;
     private boolean soup;
 
-    public Order(int mainDish, int sideDish1, int sideDish2, boolean soup) {
+    public Order(MainDish mainDish, int sideDish1, int sideDish2, boolean soup) {
         setMainDish(mainDish);
         setSideDish1(sideDish1);
         setSideDish2(sideDish2);
+        setSoup(soup);
     }
 
-    public int getMainDish() {
+    public MainDish getMainDish() {
         return mainDish;
     }
 
-    public void setMainDish(int mainDish) {
+    public void setMainDish(MainDish mainDish) {
         this.mainDish = mainDish;
     }
 

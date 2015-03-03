@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="title_activity_welcome">Bienvenido</string>
+    <string name="title_activity_signup">Registrarse</string>
+    <string name="title_activity_new_order">Ingresar Orden</string>
     <string name="app_name">Perfil de Usuario</string>
     <string name="action_settings">Opciones</string>
     <string name="user">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="login">Ingresar</string>
     <string name="signin">Registrarse</string>
-    <string name="title_activity_signup">Registrarse</string>
     <string name="name">Nombre</string>
     <string name="email">Correo</string>
     <string name="phone">Teléfono</string>
     <string name="profession">Profesión</string>
     <string name="signup">Registrarse</string>
-    <string name="title_activity_welcome">Bienvenido</string>
     <string name="welcome">Bienvenido</string>
     <string name="seeOrders">Ver Ordenes</string>
     <string name="newOrder">Ingresar Orden</string>
@@ -21,5 +22,8 @@
     <string name="mainDish">Plato Fuerte</string>
     <string name="sideDish">Guarniciones (elija 2)</string>
     <string name="wantSoup">¿Desea sopa?</string>
+    <string name="beverage">Bebida</string>
+    <string name="home">Inicio</string>
+    <string name="profile">Perfil</string>
 
 </resources>

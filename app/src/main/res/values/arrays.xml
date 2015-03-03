@@ -11,4 +11,9 @@
         <item value="noodles">Noodles</item>
         <item value="salad">Salad</item>
     </string-array>
+    <string-array name="beverages">
+        <item value="refreshment">Refreshment</item>
+        <item value="soda">Soda</item>
+        <item value="water">Water</item>
+    </string-array>
 </resources>

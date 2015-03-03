@@ -1,12 +1,15 @@
 package gt.org.kinal.userprofile;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 
@@ -31,6 +34,26 @@ public class WelcomeActivity extends ActionBarActivity {
                 startActivity(new Intent(WelcomeActivity.this, NewOrder.class));
             }
         });
+
+        //Resources from android
+        Resources resources = getResources();
+
+        //Initialize the TabHost
+        TabHost tabHost = (TabHost)findViewById(android.R.id.tabhost);
+        tabHost.setup();
+        TabHost.TabSpec tabSpec;
+        //HomeTab
+        tabSpec = tabHost.newTabSpec("tabHome");
+        tabSpec.setContent(R.id.tabHome);
+        tabSpec.setIndicator(resources.getString(R.string.home));
+        tabHost.addTab(tabSpec);
+        //ProfileTab
+        tabSpec = tabHost.newTabSpec("tabProfile");
+        tabSpec.setContent(R.id.tabProfile);
+        tabSpec.setIndicator(resources.getString(R.string.profile));
+        tabHost.addTab(tabSpec);
+
+        tabHost.setCurrentTab(0);
     }
 
 

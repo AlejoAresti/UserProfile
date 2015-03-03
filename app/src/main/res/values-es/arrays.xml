@@ -11,4 +11,9 @@
         <item value="noodles">Fideos</item>
         <item value="salad">Ensalada</item>
     </string-array>
+    <string-array name="beverages">
+        <item value="refreshment">Fresco</item>
+        <item value="soda">Agua gaseosa</item>
+        <item value="water">Agua pura</item>
+    </string-array>
 </resources>

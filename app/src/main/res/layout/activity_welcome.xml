@@ -10,52 +10,90 @@
     tools:context=".WelcomeActivity"
     android:id="@+id/lytWelcome">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
-
-        <TextView
-            android:id="@+id/lblWelcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/welcome"
-            android:layout_marginTop="5dp"
-            android:textSize="22dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="250dp"
-            android:maxHeight="250dp"
-            android:src="@drawable/ic_restaurant"
-            android:layout_marginTop="20dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
+    <TabHost
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        style="?android:attr/buttonBarButtonStyle">
-
-        <Button
+        android:layout_height="match_parent"
+        android:id="@android:id/tabhost">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/btnOrders"
-            android:layout_weight="1"
-            android:text="@string/seeOrders"/>
+            android:orientation="vertical">
+            <TabWidget
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@android:id/tabs"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@android:id/tabcontent">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/btnNewOrder"
-            android:layout_weight="1"
-            android:text="@string/newOrder"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tabHome">
 
-    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
 
+                        <TextView
+                            android:id="@+id/lblWelcome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/welcome"
+                            android:layout_marginTop="5dp"
+                            android:textSize="22dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxWidth="250dp"
+                            android:maxHeight="250dp"
+                            android:src="@drawable/ic_restaurant"
+                            android:layout_marginTop="20dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        style="?android:attr/buttonBarButtonStyle">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/btnOrders"
+                            android:layout_weight="1"
+                            android:text="@string/seeOrders"
+                            style="?android:attr/buttonBarButtonStyle"/>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/btnNewOrder"
+                            android:layout_weight="1"
+                            android:text="@string/newOrder"
+                            style="?android:attr/buttonBarButtonStyle"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tabProfile">
+
+                    <include layout="@layout/personal_data" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
 </RelativeLayout>

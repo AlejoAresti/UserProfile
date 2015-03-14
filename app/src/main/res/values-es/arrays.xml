@@ -16,4 +16,9 @@
         <item value="soda">Agua gaseosa</item>
         <item value="water">Agua pura</item>
     </string-array>
+    <string-array name="desserts">
+        <item value="noDessert">Sin postre</item>
+        <item value="iceCream">Helado</item>
+        <item value="pie">Pie</item>
+    </string-array>
 </resources>

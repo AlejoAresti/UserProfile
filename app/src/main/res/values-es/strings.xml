@@ -19,11 +19,22 @@
     <string name="seeOrders">Ver Ordenes</string>
     <string name="newOrder">Ingresar Orden</string>
     <string name="add">Agregar</string>
+    <string name="menu">Menú</string>
+    <string name="extras">Extras</string>
     <string name="mainDish">Plato Fuerte</string>
     <string name="sideDish">Guarniciones (elija 2)</string>
     <string name="wantSoup">¿Desea sopa?</string>
     <string name="beverage">Bebida</string>
     <string name="home">Inicio</string>
     <string name="profile">Perfil</string>
+    <string name="dessert">Postre</string>
+    <string name="coldBeverages">Bebidas Frías</string>
+    <string name="coffee">Café</string>
+    <string name="tea">Te</string>
+    <string name="hotBeverages">Bebidas Calientes</string>
+    <string name="beer">Cerveza</string>
+    <string name="whiskey">Wisky</string>
+    <string name="rum">Ron</string>
+    <string name="tequila">Tequila</string>
 
 </resources>

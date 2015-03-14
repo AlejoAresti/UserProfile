@@ -8,19 +8,17 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TabHost;
 
 
 public class NewOrder extends ActionBarActivity {
 
-    String[] mainDishes, sideDishes;
+    String[] mainDishes, sideDishes, desserts;
 
-    private Order order;
     private int sideDishesSelected;
 
-    private RadioGroup rgMainDishes;
-    private RadioButton rbMeat, rbChicken, rbFish;
+    private RadioButton rbMeat, rbChicken, rbFish, rbNoDessert, rbIceCream, rbPie;
     private CheckBox[] cboxSideDishes;
     private Spinner cboxBeverages;
 
@@ -29,15 +27,34 @@ public class NewOrder extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_order);
 
+        //Initialize the TabHost
+        TabHost tabHost = (TabHost)findViewById(android.R.id.tabhost);
+        tabHost.setup();
+        TabHost.TabSpec tabSpec;
+        //HomeTab
+        tabSpec = tabHost.newTabSpec("tabMenu");
+        tabSpec.setContent(R.id.tabMenu);
+        tabSpec.setIndicator(getResources().getString(R.string.menu));
+        tabHost.addTab(tabSpec);
+        //ProfileTab
+        tabSpec = tabHost.newTabSpec("tabExtras");
+        tabSpec.setContent(R.id.tabExtras);
+        tabSpec.setIndicator(getResources().getString(R.string.extras));
+        tabHost.addTab(tabSpec);
+
+        tabHost.setCurrentTab(0);
+
+        // MENU //
         //Sets the values of the main dishes
         mainDishes = getResources().getStringArray(R.array.main_dish);
-        rgMainDishes = (RadioGroup)findViewById(R.id.rgMainDishes);
         rbMeat = (RadioButton)findViewById(R.id.rbMeat);
         rbChicken = (RadioButton)findViewById(R.id.rbChicken);
         rbFish = (RadioButton)findViewById(R.id.rbFish);
         rbMeat.setText(mainDishes[MainDish.MEAT.ordinal()]);
         rbChicken.setText(mainDishes[MainDish.CHICKEN.ordinal()]);
         rbFish.setText(mainDishes[MainDish.FISH.ordinal()]);
+        //Default
+        rbMeat.setSelected(true);
 
         //Sets the values of the side dishes
         sideDishes = getResources().getStringArray(R.array.side_dish);
@@ -59,6 +76,19 @@ public class NewOrder extends ActionBarActivity {
         ArrayAdapter<CharSequence> beveragesAdapter = ArrayAdapter.createFromResource(this, R.array.beverages, android.R.layout.simple_spinner_item);
         cboxBeverages = (Spinner)findViewById(R.id.cboxBeverages);
         cboxBeverages.setAdapter(beveragesAdapter);
+
+
+        // EXTRAS //
+        //Sets the values of the main dishes
+        desserts = getResources().getStringArray(R.array.desserts);
+        rbNoDessert = (RadioButton)findViewById(R.id.rbNoDessert);
+        rbIceCream = (RadioButton)findViewById(R.id.rbIceCream);
+        rbPie = (RadioButton)findViewById(R.id.rbPie);
+        rbNoDessert.setText(desserts[MainDish.MEAT.ordinal()]);
+        rbIceCream.setText(desserts[MainDish.CHICKEN.ordinal()]);
+        rbPie.setText(desserts[MainDish.FISH.ordinal()]);
+        //Default
+        rbNoDessert.setSelected(true);
 
     }
 

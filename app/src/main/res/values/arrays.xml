@@ -16,4 +16,9 @@
         <item value="soda">Soda</item>
         <item value="water">Water</item>
     </string-array>
+    <string-array name="desserts">
+        <item value="noDessert">None</item>
+        <item value="iceCream">Ice Cream</item>
+        <item value="pie">Pie</item>
+    </string-array>
 </resources>

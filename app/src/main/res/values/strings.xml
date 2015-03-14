@@ -19,11 +19,22 @@
     <string name="seeOrders">See Orders</string>
     <string name="newOrder">New Order</string>
     <string name="add">Add</string>
+    <string name="menu">Menu</string>
+    <string name="extras">Extras</string>
     <string name="mainDish">Main Dish</string>
     <string name="sideDish">Side Dish (choose 2)</string>
     <string name="wantSoup">Want soup?</string>
     <string name="beverage">Beverage</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
+    <string name="dessert">Dessert</string>
+    <string name="hotBeverages">Hot Beverages</string>
+    <string name="coffee">Coffee</string>
+    <string name="tea">Tea</string>
+    <string name="coldBeverages">Cold Beverages</string>
+    <string name="beer">Beer</string>
+    <string name="whiskey">Whiskey</string>
+    <string name="rum">Rum</string>
+    <string name="tequila">Tequila</string>
 
 </resources>

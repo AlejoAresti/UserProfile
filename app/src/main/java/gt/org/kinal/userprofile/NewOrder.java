@@ -11,7 +11,6 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TabHost;
 
-
 public class NewOrder extends ActionBarActivity {
 
     String[] mainDishes, sideDishes, desserts;
@@ -50,9 +49,9 @@ public class NewOrder extends ActionBarActivity {
         rbMeat = (RadioButton)findViewById(R.id.rbMeat);
         rbChicken = (RadioButton)findViewById(R.id.rbChicken);
         rbFish = (RadioButton)findViewById(R.id.rbFish);
-        rbMeat.setText(mainDishes[MainDish.MEAT.ordinal()]);
-        rbChicken.setText(mainDishes[MainDish.CHICKEN.ordinal()]);
-        rbFish.setText(mainDishes[MainDish.FISH.ordinal()]);
+        rbMeat.setText(mainDishes[0]);
+        rbChicken.setText(mainDishes[1]);
+        rbFish.setText(mainDishes[2]);
         //Default
         rbMeat.setSelected(true);
 
@@ -67,9 +66,9 @@ public class NewOrder extends ActionBarActivity {
 
         //Listener for the side dishes checkboxes (there can only be 2 selected)
         SideDishesCheckBoxListener sdcbl = new SideDishesCheckBoxListener();
-        for (SideDish sideDish : SideDish.values()) {
-            cboxSideDishes[sideDish.ordinal()].setText(sideDishes[sideDish.ordinal()]);
-            cboxSideDishes[sideDish.ordinal()].setOnCheckedChangeListener(sdcbl);
+        for (int i = 0; i < sideDishes.length; i++) {
+            cboxSideDishes[i].setText(sideDishes[i]);
+            cboxSideDishes[i].setOnCheckedChangeListener(sdcbl);
         }
 
         //Spinner of Beverages
@@ -84,9 +83,9 @@ public class NewOrder extends ActionBarActivity {
         rbNoDessert = (RadioButton)findViewById(R.id.rbNoDessert);
         rbIceCream = (RadioButton)findViewById(R.id.rbIceCream);
         rbPie = (RadioButton)findViewById(R.id.rbPie);
-        rbNoDessert.setText(desserts[MainDish.MEAT.ordinal()]);
-        rbIceCream.setText(desserts[MainDish.CHICKEN.ordinal()]);
-        rbPie.setText(desserts[MainDish.FISH.ordinal()]);
+        rbNoDessert.setText(desserts[0]);
+        rbIceCream.setText(desserts[1]);
+        rbPie.setText(desserts[2]);
         //Default
         rbNoDessert.setSelected(true);
 

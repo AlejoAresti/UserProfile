@@ -91,9 +91,9 @@
                             android:text="@string/wantSoup"
                             android:textSize="20dp"/>
                         <Switch
+                            android:id="@+id/swWantSoup"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/tbWantSoup"
                             android:layout_marginLeft="10dp"
                             android:padding="4dp"/>
 

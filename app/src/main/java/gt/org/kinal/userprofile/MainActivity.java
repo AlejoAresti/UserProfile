@@ -10,12 +10,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import gt.org.kinal.userprofile.sqlite.DBOpenHelper;
+import gt.org.kinal.userprofile.sqlite.SQLiteTable;
+
 public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // Login action
         Button btnLogin = (Button)findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {

@@ -16,7 +16,7 @@ import android.widget.TextView;
 public class WelcomeActivity extends ActionBarActivity {
 
     private TextView lblWelcome;
-    private Button btnNewOrder;
+    private Button btnNewOrder, btnOrders;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,14 @@ public class WelcomeActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(WelcomeActivity.this, NewOrder.class));
+            }
+        });
+
+        btnOrders = (Button)findViewById(R.id.btnOrders);
+        btnOrders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelcomeActivity.this, ListOrdersActivity.class));
             }
         });
 

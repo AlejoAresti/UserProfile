@@ -36,5 +36,6 @@
     <string name="whiskey">Wisky</string>
     <string name="rum">Ron</string>
     <string name="tequila">Tequila</string>
+    <string name="title_activity_list_orders">Lista de Ordenes</string>
 
 </resources>
